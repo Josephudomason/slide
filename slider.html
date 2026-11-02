@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./slider.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+  <style>
+
+    /* Container with fixed height and overflow hidden */
+
+    #slider {
+
+      height: 280px; /* Adjust as per image height */
+
+      overflow: hidden;
+
+      position: relative;
+
+      width: 500px; /* Adjust as per image width */
+
+    }
+
+
+    /* Wrapper for all images stacked vertically */
+
+    #slider-wrapper {
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      transition: top 0.5s ease-in-out;
+
+    }
+   
+
+  </style>
+
+</head>
+
+<body class="flex flex-col justify-center items-center min-h-screen bg-gray-100 space-y-4 mt-5 mb-5">
+
+
+
+  <div id="slider" class="border border-gray-300 rounded shadow-lg">
+
+    <div id="slider-wrapper">
+
+      <img src="./sildes-anime/anime1.jpg" alt="Image 1" class="w-full h-72 object-cover" />
+
+      <img src="./sildes-anime/anime2.jpg" alt="Image 2" class="w-full h-72 object-cover" />
+
+      <img src="./sildes-anime/anime3.jpg" alt="Image 3" class="w-full h-72 object-cover" />
+
+      <img src="./sildes-anime/anime4.jpg" alt="Image 3" class="w-full h-72 object-cover" />
+
+    </div>
+
+  </div>
+
+
+
+  <div class="flex space-x-4">
+
+    <button id="prevBtn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 ">Prev</button>
+
+    <button id="nextBtn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Next</button>
+
+  </div>
+  
+  <!-- <div class="flex justify-center items-center flex-row">
+    <div id="side-slide" class="relative h-72 w-128 overflow-hidden rounded border-gray-300 shadow-lg transition-transform duration-500 ease-in-out"> -->
+
+  <div class="relative h-72 w-124 overflow-hidden rounded border-gray-300 shadow-lg">
+    <div id="side-slide" class="absolute left-0 top-0 right-0 bottom-0 w-full flex transition-transform duration-500 ease-in-out ">
+      <img src="./sildes-anime/anime1.jpg" alt="Image 1" class="w-full h-full object-cover" />
+
+      <img src="./sildes-anime/anime2.jpg" alt="Image 2" class="w-full h-full object-cover"/>
+
+      <img src="./sildes-anime/anime3.jpg" alt="Image 3" class="w-full h-full object-cover" />
+
+      <img src="./sildes-anime/anime4.jpg" alt="Image 4" class="w-full h-full object-cover" />
+    </div>
+
+    <div class="absolute flex justify-between items-center w-full overflow-hidden mt-30">
+    <button id="prev-btn" class=" px-4 py-2 bg-black/70 text-white font-extrabold rounded hover:bg-black/30"><</button>
+    <button id="next-btn" class="px-4 py-2 bg-black/70 text-white font-extrabold rounded hover:bg-black/30">></button>
+  </div>
+  </div>
+
+  
+
+  <script src="slides.js"></script>
+
+</body>
+
+</html>
